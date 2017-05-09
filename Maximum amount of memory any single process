@@ -1,0 +1,11 @@
+Mark Russinovich published a multipart series on windows memory resources really covers this very well. You can find it here: http://blogs.technet.com/b/markrussinovich/archive/2008/07/21/3092070.aspx
+
+He covers the reasons why the limits are what they are, as well as tests. The code for the tests are floating around in the tubes somewhere.
+
+If you want to know about memory resources and the problems you can see from leaking the various types, it is a good read.
+
+But, in a nutshell, 32 bit on 32 bit OS: 2 GB, unless set to large address space aware, in which case 3 GB. 32 bit on 64 bit OS: 2 GB, unless set to large address space aware, in which case 4 GB.
+
+64 bit process: 2 GB, unless set to large address space aware, in which case it could address up to 8 TB, unless it is hosted on an Intel Itanium-based systems which is limited to 7 TB.
+
+Microsoft states the various limits (by flavors and types) at: http://msdn.microsoft.com/en-us/library/aa366778.aspx
