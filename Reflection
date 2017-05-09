@@ -1,0 +1,31 @@
+Wikipedia says that "In computer science, reflection is the process by which a computer program can observe and modify its own structure and behaviour".
+
+Reflection provides objects (of type Type) that describe assemblies, modules and types. You can use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties. If you are using attributes in your code, reflection enables you to access them. For more information, see Attributes.
+Here's a simple example of reflection using the static method GetType - inherited by all types from the Object base class - to obtain the type of a variable:
+C#
+ Copy
+// Using GetType to obtain type information:  
+int i = 42;  
+System.Type type = i.GetType();  
+System.Console.WriteLine(type);  
+
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("a + b + c = " + (a + b + c));
+            Console.WriteLine("Please enter the name of the variable that you wish to change:");
+            string varName = Console.ReadLine();
+            Type t = typeof(Program);
+            FieldInfo fieldInfo = t.GetField(varName, BindingFlags.NonPublic | BindingFlags.Static);
+            if(fieldInfo != null)
+            {
+                Console.WriteLine("The current value of " + fieldInfo.Name + " is " + fieldInfo.GetValue(null) + ". You may enter a new value now:");
+                string newValue = Console.ReadLine();
+                int newInt;
+                if(int.TryParse(newValue, out newInt))
+                {
+                    fieldInfo.SetValue(null, newInt);
+                    Console.WriteLine("a + b + c = " + (a + b + c));
+                }
+                Console.ReadKey();
+            }
