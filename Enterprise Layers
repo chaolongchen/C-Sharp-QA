@@ -1,0 +1,11 @@
+The architecture for enterprise application should have the following levels:
+
+1. Entity Layer: Contains entities (POCOs)
+2. Data Layer: Contains all code related to database access
+3. Business Layer: Contains definitions and validations related to business
+5. Services Layer (optional): Contains invocations for external services (ASMX, WCF, RESTful)
+6. Common: Contains common classes and interfaces for all layers (e.g. Loggers, Mappers, Extensions)
+7. Tests (QA): Contains automated tests
+8. Presentation Layer: This is the UI
+
+https://www.codeproject.com/Articles/1160586/EF-Core-for-Enterprise
