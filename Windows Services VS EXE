@@ -17,9 +17,19 @@ from the logged-on user or the default computer account.
 
 
 Service Lifetime
-A service goes through several internal states in its lifetime. First, the service is installed onto the system on which it will run. This process executes the installers for the service project and loads the service into the Services Control Manager for that computer. The Services Control Manager is the central utility provided by Windows to administer services.
-After the service has been loaded, it must be started. Starting the service allows it to begin functioning. You can start a service from the Services Control Manager, from Server Explorer, or from code by calling the Start method. The Start method passes processing to the application's OnStart method and processes any code you have defined there.
-A running service can exist in this state indefinitely until it is either stopped or paused or until the computer shuts down. A service can exist in one of three basic states: Running, Paused, or Stopped. The service can also report the state of a pending command: ContinuePending, PausePending, StartPending, or StopPending. These statuses indicate that a command has been issued, such as a command to pause a running service, but has not been carried out yet. You can query the Status to determine what state a service is in, or use the WaitForStatus to carry out an action when any of these states occurs.
+A service goes through several internal states in its lifetime. 
+First, the service is installed onto the system on which it will run. 
+This process executes the installers for the service project and l
+oads the service into the Services Control Manager for that computer. 
+The Services Control Manager is the central utility provided by Windows to administer services.
+After the service has been loaded, it must be started. 
+Starting the service allows it to begin functioning. 
+You can start a service from the Services Control Manager, 
+from Server Explorer, or from code by calling the Start method. 
+The Start method passes processing to the application's OnStart method and processes any code you have defined there.
+A running service can exist in this state indefinitely 
+until it is either stopped or paused or until the computer shuts down. 
+A service can exist in one of three basic states: Running, Paused, or Stopped. The service can also report the state of a pending command: ContinuePending, PausePending, StartPending, or StopPending. These statuses indicate that a command has been issued, such as a command to pause a running service, but has not been carried out yet. You can query the Status to determine what state a service is in, or use the WaitForStatus to carry out an action when any of these states occurs.
 You can pause, stop, or resume a service from the Services Control Manager, from Server Explorer, or by calling methods in code. Each of these actions can call an associated procedure in the service (OnStop, OnPause, or OnContinue), in which you can define additional processing to be performed when the service changes state
 
 
