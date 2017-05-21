@@ -1,0 +1,5 @@
+Dispose - This method uses interface – “IDisposable” interface 
+and it will free up both managed and unmanaged codes like – database connection, files etc.
+
+Finalize - This method is called internally unlike Dispose method which is called explicitly. 
+It is called by garbage collector and can’t be called from the code.
