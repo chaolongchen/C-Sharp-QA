@@ -1,0 +1,29 @@
+In LINQ, deferred execution simply means that the query is not executed at the time it is specified. 
+Specifically, this is accomplished by assigning the query to a variable. 
+When this is done, the query definition is stored in the variable 
+but the query is not executed until the query variable is iterated over. For example:
+
+DataContext productContext = new DataContext();
+
+var productQuery = from product in productContext.Products
+        where product.Type == "SOAPS"
+        select product;   // Query is NOT executed here
+
+foreach (var product in productQuery)   // Query executes HERE
+{
+  Console.WriteLine(product.Name);
+}
+
+You can also force immediate execution of a query. 
+This can be useful, for example, if the database is being updated frequently, 
+and it is important in the logic of your program to ensure 
+that the results you’re accessing are those returned at the point 
+in your code where the query was specified. 
+Immediate execution is often forced using a method 
+such as Average, Sum, Count, List, ToList, or ToArray. For example:
+
+DataContext productContext = new DataContext();
+
+var productCountQuery = (from product in productContext.Products
+        where product.Type == "SOAPS"
+        select product).Count();   // Query executes HERE
