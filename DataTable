@@ -1,0 +1,3 @@
+Data Table is used to store the data retrieved from a database in application memory. 
+Data table will have a set of data columns and data rows. 
+Data table supports operations like adding, updating and deleting a row.
