@@ -1,0 +1,4 @@
+“Using” statement calls – “dispose” method internally, 
+whenever any exception occurred in any method call 
+and in “Using” statement objects are read only and cannot be reassignable or modifiable.
+
