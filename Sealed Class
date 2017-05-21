@@ -1,0 +1,2 @@
+Sealed class is used to prevent the class from being inherited from other classes. 
+So “sealed” modifier also can be used with methods to avoid the methods to override in the child classes.
