@@ -1,0 +1,2 @@
+“throw ex” will replace the stack trace of the exception with stack trace info of re throw point.
+“throw” will preserve the original stack trace info.
