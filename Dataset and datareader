@@ -1,0 +1,8 @@
+DataReader is used to fetch data from a database in a much faster way. 
+Since the rows are fetched one at a time, load on the network will be low. 
+Since DataReader is read only, transactions are not allowed. 
+Since it support forward only data iteration, random data fetch is not supported.
+
+DataSet is an in-memory representation of a table in a database. 
+Dataset takes lot of application memory compared to DataReader. 
+It is slower compared to DataReader. But user can do transactions using DataSet. It also support querying.
