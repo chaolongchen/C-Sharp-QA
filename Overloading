@@ -1,0 +1,11 @@
+When methods are created with the same name, but with different signature its called overloading. 
+For example, WriteLine method in console class is an example of overloading. 
+In the first instance, it takes one variable. In the second instance, “WriteLine” method takes two variable.
+
+Console.WriteLine(x);
+Console.WriteLine("The message is {0}", Message);
+Different types of overloading in C# are
+
+Constructor overloading
+Function overloading
+Operator overloading
