@@ -1,0 +1,17 @@
+Indexers are used for allowing the classes to be indexed like arrays. Indexers will resemble the property structure but only difference is indexer’s accessors will take parameters. For example,
+
+class MyCollection<T>
+{
+ private T[] myArr = new T[100];
+ public T this[int t]
+ {
+ get
+ {
+ return myArr[t];
+ }
+ set
+ {
+ myArr[t] = value;
+ }
+ }
+}
