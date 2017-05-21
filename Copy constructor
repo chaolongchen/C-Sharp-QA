@@ -1,0 +1,17 @@
+f the constructor contains the same class in the constructor parameter then it is called as copy constructor.
+
+class MyClass
+{
+ public string prop1, prop2;
+ public MyClass(string a, string b)
+ {
+ prop1 = a;
+ prop2 = b;
+ }
+ 
+ public MyClass(MyClass myobj) // Copy Constructor
+ {
+ prop1 = myobj.prop1;
+ prop2 = myobj.prop2;
+ }
+}
