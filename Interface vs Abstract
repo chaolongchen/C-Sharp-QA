@@ -1,0 +1,9 @@
+An interface merely declares a contract or a behavior that implementing classes should have. 
+It may declare only properties, methods, and events with no access modifiers. 
+All the declared members must be implemented.
+
+An abstract class provides a partial implementation for a functionality 
+and some abstract/virtual members that must be implemented by the inheriting entities. 
+It can declare fields too.
+
+Neither interfaces nor abstract classes can be instantiated.
