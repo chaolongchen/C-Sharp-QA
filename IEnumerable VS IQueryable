@@ -27,7 +27,13 @@ It implements IEnumerable <T> so the results can be iterated using foreach
 It is best suited to query against external data sources.
 It creates query using an Expression Tree
 It is used to query a queryable data source
-When you use IQueryable<T>, the query gets created using an Expression Tree. Further the LINQ provider converts the Expression tree into the real SQL query. Always remember that IQueryable<T> does only construct query and it loads data in deferred way.
+
+/***
+When you use IQueryable<T>, the query gets created using an Expression Tree. 
+Further the LINQ provider converts the Expression tree into the real SQL query. 
+Always remember that IQueryable<T> does only construct query and it loads data in deferred way.
+***/
+
 When to use IQueryable<T> 
 Try answering the following questions,
 Working with the queryable datasource
