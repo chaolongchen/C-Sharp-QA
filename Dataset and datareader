@@ -6,3 +6,5 @@ Since it support forward only data iteration, random data fetch is not supported
 DataSet is an in-memory representation of a table in a database. 
 Dataset takes lot of application memory compared to DataReader. 
 It is slower compared to DataReader. But user can do transactions using DataSet. It also support querying.
+
+Dataset contains multiple datatable
