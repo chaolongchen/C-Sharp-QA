@@ -21,3 +21,19 @@ and working on IQueryable<T> can in many cases save you from returning too many 
 Another prime example is doing paging: If you use Take and Skip on IQueryable, 
 you will only get the number of rows requested; 
 doing that on an IEnumerable<T> will cause all of your rows to be loaded in memory.
+
+
+It implements IEnumerable <T> so the results can be iterated using foreach
+It is best suited to query against external data sources.
+It creates query using an Expression Tree
+It is used to query a queryable data source
+When you use IQueryable<T>, the query gets created using an Expression Tree. Further the LINQ provider converts the Expression tree into the real SQL query. Always remember that IQueryable<T> does only construct query and it loads data in deferred way.
+When to use IQueryable<T> 
+Try answering the following questions,
+Working with the queryable datasource
+Need to apply filter on data at the datasource
+Need to apply paging , composition
+Working with external data source
+Needs to load data in deferred way
+Need to use foreach to iterate collection
+If answer to all of the above questions are YES, then consider using IQueryable<T>
