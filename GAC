@@ -1,1 +1,6 @@
-Global Assembly Cache :-- Assemblies can be shared among multiple applications on the machine by registering them in global Assembly cache(GAC). GAC is a machine wide a local cache of assemblies maintained by the .NET Framework. We can register the assembly to global assembly cache by using gacutil command. We can Navigate to the GAC directory, C:\winnt\Assembly in explore. In the tools menu select the cache properties; in the windows displayed you can set the memory limit in MB used by the GAC
+Global Assembly Cache :-- Assemblies can be shared among multiple applications on the machine 
+by registering them in global Assembly cache(GAC). 
+GAC is a machine wide a local cache of assemblies maintained by the .NET Framework. 
+We can register the assembly to global assembly cache by using gacutil command. 
+We can Navigate to the GAC directory, C:\winnt\Assembly in explore. 
+In the tools menu select the cache properties; in the windows displayed you can set the memory limit in MB used by the GAC
