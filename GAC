@@ -4,3 +4,20 @@ GAC is a machine wide a local cache of assemblies maintained by the .NET Framewo
 We can register the assembly to global assembly cache by using gacutil command. 
 We can Navigate to the GAC directory, C:\winnt\Assembly in explore. 
 In the tools menu select the cache properties; in the windows displayed you can set the memory limit in MB used by the GAC
+
+GAC is really a repository for Microsoft common .NET libraries. 
+Yes, they let developers use it too, but as a rule of thumb, if you don't need GAC, don't use it. 
+keep things simple and local if it doesn't hurt.
+
+I would consider GAC only for performance reasons, for example if you have some huge assemblies, 
+try to place them into GAC and NGEN them. It should significantly increase performance. 
+Microsoft does it for all standard .NET framework assemblies during installation 
+(now you know why that installation takes so long). 
+Paint.NET does it as well (to improve startup time of their app). 
+However most of us don't work on huge frameworks or photoshop competitors, so most of the time, 
+performance gains from having assembly in GAC are minimal. Not worth giving up simple x-copy deployment.
+
+Some developers might use GAC to make sure that users with insufficient privileges can't delete or modify their assemblies.
+
+For others it might be for versioning reasons but here you should really reconsider. 
+I'm not going to repeat what has been already said, you can read here why.
