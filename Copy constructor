@@ -1,4 +1,4 @@
-f the constructor contains the same class in the constructor parameter then it is called as copy constructor.
+The constructor contains the same class in the constructor parameter then it is called as copy constructor.
 
 class MyClass
 {
