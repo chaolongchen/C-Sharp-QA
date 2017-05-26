@@ -1,0 +1,35 @@
+Personally I believe TPL should be your de-facto choice for any new multi-threading work 
+you are taking up but there are few pointers which will help you in deciding between the three worlds.
+
+When to create and use threads manually?
+
+If you seek absolute control of the new threads which are getting created in your system 
+for the reasons which are mentioned below but are not limited to:
+
+When my thread should get created?
+How many new threads should get created in my process?
+When my thread should be disposed?
+What should be the priority of the new thread from OS scheduling algorithm stand-point? e.g. high, medium, low
+Should my thread be a background thread or a foreground thread?
+When to use threadpool is more appropriate?
+
+If your background workloads are primarily and purely fire-and-forget asynchronous work, 
+then using QueueUserWorkItem may be appropriate e.g. Processing the content of csv files 
+getting continuously created in a directory and then dumping the read content into a database table.
+
+When using TPL is more appropriate?
+
+Following scenarios might prompt you to use TPL:
+
+If you want to use new features (continuation options, knowing the completion state of a thread, 
+returning a value after work is done, etc) of TPL
+
+If you want to keep your UI responsive all the time
+
+If you have ever worked  or want to work on windows store applications 
+then TPL is the new gateway to leverage thread-pool. 
+Although, ThreadPool class has also been reintroduced in Windows.System.Threading namespace 
+to leverage its QueueUserWorkItem API as Windows Store Apps don't have access to System.Threading namespace anymore.
+
+If you have any other multi-threading need which doesn't fit other two scenarios mentioned in this section 
+i.e. creating the thread directly for full control or using conventional thread pool for fire and forget scenario.
