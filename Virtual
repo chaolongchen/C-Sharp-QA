@@ -1,0 +1,3 @@
+The Overridable keyword in VB corresponds to the virtual keyword in C#.
+
+You have to make a method virtual to be able to override it. Abstract methods are automatically virtual.
